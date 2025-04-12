@@ -5,6 +5,7 @@ import { blue, orange } from '@mui/material/colors';
 import HomePage from './pages/HomePage';
 import ProteinPage from './pages/ProteinPage';
 import NotFoundPage from './pages/NotFoundPage';
+import AppLayout from './components/AppLayout';
 
 const theme = createTheme({
   palette: {
@@ -52,13 +53,15 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/protein/:proteinId" element={<ProteinPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-      </Router>
+      <AppLayout>
+        <Router>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/protein/:proteinId" element={<ProteinPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+        </Router>
+      </AppLayout>
     </ThemeProvider>
   );
 };
