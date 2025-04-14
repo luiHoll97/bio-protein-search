@@ -10,6 +10,12 @@
 cd backend 
 ```
 
+- install deps
+
+```
+poetry install --no-root
+```
+
 - Start the api (using uvicorn)
 
 ```
