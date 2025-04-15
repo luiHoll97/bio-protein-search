@@ -1,4 +1,6 @@
 # Biographica Protein Info
+Web application designed to search, visualise, and explore protein data from a biological knowledge graph.
+
 <small>April 2025: ~5hrs</small>
 
 ## Running Application
